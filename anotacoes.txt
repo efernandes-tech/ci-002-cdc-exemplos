@@ -1,0 +1,3 @@
+Anotações:
+
+- Todas as aplicações deste projeto usam o mesmo "system".
