@@ -1,3 +1,5 @@
 Anotações:
 
 - Todas as aplicações deste projeto usam o mesmo "system".
+
+PG 57 => Cap. 5.3
