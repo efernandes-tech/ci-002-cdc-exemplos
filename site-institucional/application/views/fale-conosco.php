@@ -1,4 +1,4 @@
-<?php $this->load->view('commons/header'); ?>
+<?php $this->load->view('commons/header');?>
 
 <div class="container">
     <div class="page-header">
@@ -7,41 +7,50 @@
 
     <div class="row">
         <div class="col-md-8">
-            <?php if($formErrors){ ?>
-                <div class="alert alert-danger">
-                    <?=$formErrors?>
-                </div>
-            <?php }else{ ?>
-                <?php if($this->session->flashdata('success_msg')) {?>
-                    <div class="alert alert-success">
-                        <?=$this->session->flashdata('success_msg')?>
-                    </div>
-                <?php } ?>
-            <?php } ?>
-            <form class="form-horizontal" method="POST" action="<?=base_url('fale-conosco')?>">
+            <?php if ($formErrors) {?>
+            <div class="alert alert-danger">
+                <?php echo $formErrors;?>
+            </div>
+            <?php } else {?>
+            <?php if ($this->session->flashdata('success_msg')) {?>
+            <div class="alert alert-success">
+                <?php echo $this->session->flashdata('success_msg');?>
+            </div>
+            <?php }?>
+            <?php }?>
+            <form class="form-horizontal" method="POST" action="<?php echo base_url('fale-conosco');?>">
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="nome">Nome</label>
                     <div class="col-md-8">
-                        <input id="nome" name="nome" placeholder="Nome" class="form-control input-md" required="" type="text" value="<?=set_value('nome')?>">
+                        <input id="nome" name="nome" placeholder="Nome" class="form-control input-md" required="" type="text" value="<?php echo set_value('nome');?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="email">Email</label>
                     <div class="col-md-8">
-                        <input id="email" name="email" placeholder="Email" class="form-control input-md" required="" type="text" value="<?=set_value('email')?>">
+                        <input id="email" name="email" placeholder="Email" class="form-control input-md" required="" type="text" value="<?php echo set_value('email');?>">
                         <span class="help-block">Ex.: email@example.com</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="assunto">Assunto</label>
                     <div class="col-md-8">
-                        <input id="assunto" name="assunto" placeholder="Assunto" class="form-control input-md" required="" type="text" value="<?=set_value('assunto')?>">
+                        <input id="assunto" name="assunto" placeholder="Assunto" class="form-control input-md" required="" type="text" value="<?php echo set_value('assunto');?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="mensagem">Mensagem</label>
                     <div class="col-md-8">
-                        <textarea class="form-control" id="mensagem" name="mensagem" rows="10"><?=set_value('mensagem')?></textarea>
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="10"><?php echo set_value('mensagem');?></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="assunto">Captcha</label>
+                    <div class="col-md-4">
+                        <input id="captcha" name="captcha" placeholder="Captcha" class="form-control input-md" required="" type="text" value="">
+                    </div>
+                    <div class="col-md-4">
+                        <?php echo $captcha_image;?>
                     </div>
                 </div>
                 <div class="form-group">
@@ -68,4 +77,4 @@
     </div>
 </div>
 
-<?php $this->load->view('commons/footer'); ?>
+<?php $this->load->view('commons/footer');?>

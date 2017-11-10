@@ -65,6 +65,8 @@ class Contato extends CI_Controller
             }
         }
 
+        $data['captcha_image'] = $this->GenCaptcha();
+
         $this->load->view('fale-conosco', $data);
     }
 
@@ -208,6 +210,8 @@ class Contato extends CI_Controller
         $cap = create_captcha($vals);
 
         $this->session->set_userdata('user_captcha_value', $cap['word']);
+
+        return $cap['image'];
     }
 }
 
