@@ -26,9 +26,9 @@ class Hash extends CI_Controller
         // );
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('hash-form');
+            echo 'hash-form';
         } else {
-            $this->load->view('hash-success');
+            echo 'hash-success';
         }
     }
 
