@@ -1,9 +1,9 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Institucional extends CI_Controller {
-
+class Institucional extends CI_Controller
+{
     public function __construct()
     {
         parent::__construct();
@@ -15,6 +15,13 @@ class Institucional extends CI_Controller {
         $this->load->view('home');
     }
 
+    public function Empresa() {
+        $this->load->view('empresa');
+    }
+
+    public function Servicos() {
+        $this->load->view('servicos');
+    }
 }
 
 /* End of file Institucional.php */
