@@ -87,6 +87,7 @@ class User extends CI_Controller
 
     public function UpdatePassw()
     {
+
         $data['success'] = null;
         $data['error']   = null;
 
