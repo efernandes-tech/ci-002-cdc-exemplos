@@ -10,6 +10,7 @@ class Contato extends CI_Controller
         $this->load->library(array('form_validation', 'session'));
 
         $this->load->helper('form');
+        $this->load->helper('captcha');
     }
 
     public function FaleConosco()
