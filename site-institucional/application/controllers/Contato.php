@@ -41,6 +41,11 @@ class Contato extends CI_Controller
             ),
         );
         $this->form_validation->set_rules($rules);
+        $this->form_validation->set_rules(
+            'captcha',
+            'Captcha',
+            'trim|required|callback_captcha_check'
+        );
 
         if ($this->form_validation->run() == false) {
             $data['formErrors'] = validation_errors();
@@ -200,6 +205,9 @@ class Contato extends CI_Controller
         return $data;
     }
 
+    /**
+     * @return mixed
+     */
     private function GenCaptcha()
     {
         $vals = array(
@@ -212,6 +220,20 @@ class Contato extends CI_Controller
         $this->session->set_userdata('user_captcha_value', $cap['word']);
 
         return $cap['image'];
+    }
+
+    /**
+     * @param $str
+     */
+    public function captcha_check($str)
+    {
+        if ($str === $this->session->userdata('user_captcha_value')) {
+            return true;
+        } else {
+            $this->form_validation->set_message('captcha_check', 'O texto informado está incorreto.');
+
+            return false;
+        }
     }
 }
 
