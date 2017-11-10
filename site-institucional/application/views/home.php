@@ -24,15 +24,9 @@
                 <div class="masthead clearfix">
                     <div class="inner">
                         <h1 class="masthead-brand">LCI</h1>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">A Empresa</a></li>
-                                <li><a href="#">Serviços</a></li>
-                                <li><a href="#">Trabalhe Conosco</a></li>
-                                <li><a href="#">Fale Conosco</a></li>
-                            </ul>
-                        </nav>
+                        <div id="navbar" class="collapse navbar-collapse">
+                            <?php $this->load->view('commons/menu'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="inner cover">

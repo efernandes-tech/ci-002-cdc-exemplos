@@ -30,13 +30,7 @@
                 <a class="navbar-brand" href="#">LCI</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">A Empresa</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Trabalhe Conosco</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
-                </ul>
+                <?php $this->load->view('commons/menu'); ?>
             </div>
         </div>
     </nav>
