@@ -17,10 +17,29 @@ class Contato extends CI_Controller
         $data['title']       = "LCI | Fale Conosco";
         $data['description'] = "Exercício de exemplo do CodeIgniter";
 
-        $this->form_validation->set_rules('nome', 'Nome', 'trim|required|min_length[3]');
-        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-        $this->form_validation->set_rules('assunto', 'Assunto', 'trim|required|min_length[5]');
-        $this->form_validation->set_rules('mensagem', 'Mensagem', 'trim|required|min_length[30]');
+        $rules = array(
+            array(
+                'field' => 'nome',
+                'label' => 'Nome',
+                'rules' => 'trim|required|min_length[3]',
+            ),
+            array(
+                'field' => 'email',
+                'label' => 'Email',
+                'rules' => 'trim|required|valid_email',
+            ),
+            array(
+                'field' => 'assunto',
+                'label' => 'Assunto',
+                'rules' => 'trim|required|min_length[5]',
+            ),
+            array(
+                'field' => 'mensagem',
+                'label' => 'Mensagem',
+                'rules' => 'trim|required|min_length[30]',
+            ),
+        );
+        $this->form_validation->set_rules($rules);
 
         if ($this->form_validation->run() == false) {
             $data['formErrors'] = validation_errors();
@@ -56,7 +75,15 @@ class Contato extends CI_Controller
         $this->form_validation->set_rules('nome', 'Nome', 'trim|required|min_length[3]');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         $this->form_validation->set_rules('telefone', 'telefone', 'trim|required|min_length[5]');
-        $this->form_validation->set_rules('mensagem', 'Mensagem', 'trim|required|min_length[30]');
+        $this->form_validation->set_rules(
+            'mensagem',
+            'Mensagem',
+            array(
+                'trim',
+                'required',
+                'min_length[30]'
+            )
+        );
 
         if ($this->form_validation->run() == false) {
             $data['formErrors'] = validation_errors();
