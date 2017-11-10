@@ -6,7 +6,15 @@ class Hash extends CI_Controller
     {
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('hash', 'Hash', 'callback_hash_check');
+        $this->form_validation->set_rules(
+            'hash',
+            'Hash',
+            'callback_hash_check'
+            // Mudando a mensagem padrão de uma regra.
+            // ,array(
+                // 'callback_hash_check' => 'Erro.'
+            // )
+        );
 
         // Validação usando uma model e seu método. (Ex.: Validar se usuário já existe)
         // $this->form_validation->set_rules(
@@ -30,7 +38,7 @@ class Hash extends CI_Controller
     public function hash_check($str)
     {
         if ($str == 'A3@hbGF32mbN') {
-            $this->form_validation->set_message('hash_check', 'O campo hash não corresponde a "A3@hbGF32mbN"');
+            $this->form_validation->set_message('hash_check', 'O campo {field} não corresponde a "A3@hbGF32mbN"');
 
             return false;
         } else {
