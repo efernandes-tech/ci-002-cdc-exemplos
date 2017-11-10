@@ -206,6 +206,8 @@ class Contato extends CI_Controller
         );
 
         $cap = create_captcha($vals);
+
+        $this->session->set_userdata('user_captcha_value', $cap['word']);
     }
 }
 
