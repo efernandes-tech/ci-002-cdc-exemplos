@@ -82,7 +82,7 @@ class Contato extends CI_Controller
             array(
                 'trim',
                 'required',
-                'min_length[30]'
+                'min_length[30]',
             )
         );
 
@@ -196,6 +196,16 @@ class Contato extends CI_Controller
         }
 
         return $data;
+    }
+
+    private function GenCaptcha()
+    {
+        $vals = array(
+            'img_path' => './captcha/',
+            'img_url'  => base_url('captcha'),
+        );
+
+        $cap = create_captcha($vals);
     }
 }
 
