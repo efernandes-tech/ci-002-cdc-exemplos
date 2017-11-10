@@ -12,15 +12,24 @@ class Institucional extends CI_Controller
 
     public function index()
     {
-        $this->load->view('home');
+        $data['title'] = "LCI | Home";
+        $data['description'] = "Exercício de exemplo do CodeIgniter";
+
+        $this->load->view('home', $data);
     }
 
     public function Empresa() {
-        $this->load->view('empresa');
+        $data['title'] = "LCI | A Empresa";
+        $data['description'] = "Informações sobre a empresa";
+
+        $this->load->view('empresa', $data);
     }
 
     public function Servicos() {
-        $this->load->view('servicos');
+        $data['title'] = "LCI | Serviços";
+        $data['description'] = "Informações sobre os serviços prestados";
+
+        $this->load->view('servicos', $data);
     }
 }
 
