@@ -81,6 +81,28 @@ class Urls_model extends CI_Model
             return false;
         }
     }
+
+    /**
+     * @param $user_id
+     * @param $limit
+     * @param $offset
+     * @return mixed
+     */
+    public function GetAllByPage($user_id, $limit, $offset)
+    {
+        $this->db->select('*')
+            ->from('urls')
+            ->where('user_id', $user_id)
+            ->limit($limit, $offset);
+
+        $result = $this->db->get()->result();
+
+        if ($result) {
+            return $result;
+        } else {
+            return false;
+        }
+    }
 }
 
 /* End of file Urls_model.php */

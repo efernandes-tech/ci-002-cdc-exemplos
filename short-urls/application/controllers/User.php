@@ -109,15 +109,63 @@ class User extends CI_Controller
         $this->load->view('alterar-senha', $data);
     }
 
+    /*public function URLs()
+    {
+    $this->load->model('Urls_model');
+
+    $urls = $this->Urls_model->GetAllByUser($this->session->userdata('id'));
+
+    $data['urls']      = $urls;
+    $data['error']     = null;
+    $data['short_url'] = false;
+
+    $this->load->view('minhas-urls', $data);
+    }*/
+
     public function URLs()
     {
         $this->load->model('Urls_model');
 
-        $urls = $this->Urls_model->GetAllByUser($this->session->userdata('id'));
+        $config['base_url']   = base_url('minhas-urls');
+        $config['total_rows'] = $this->db->select('*')->from('urls')->where('user_id', $this->session->userdata('id'))->count_all_results();
 
-        $data['urls']      = $urls;
-        $data['error']     = null;
-        $data['short_url'] = false;
+        $config['per_page']         = 5;
+        $config['uri_segment']      = 2;
+        $config['num_links']        = 5;
+        $config['use_page_numbers'] = true;
+        $config['full_tag_open']    = "<nav><ul class='pagination'>";
+        $config['full_tag_close']   = "<ul></nav>";
+        $config['first_link']       = "Primeira";
+        $config['first_tag_open']   = "<li>";
+        $config['first_tag_close']  = "</li>";
+        $config['last_link']        = "Última";
+        $config['last_tag_open']    = "<li>";
+        $config['last_tag_close']   = "</li>";
+        $config['next_link']        = "Próxima";
+        $config['next_tag_open']    = "<li>";
+        $config['next_tag_close']   = "</li>";
+        $config['prev_link']        = "Anterior";
+        $config['prev_tag_open']    = "<li>";
+        $config['prev_tag_close']   = "</li>";
+        $config['cur_tag_open']     = "<li class='active'><a href='#'>";
+        $config['cur_tag_close']    = "</a></li>";
+        $config['num_tag_open']     = "<li>";
+        $config['num_tag_close']    = "</li>";
+
+        $this->load->library('pagination', $config);
+
+        if ($this->uri->segment(2)) {
+            $offset = ($this->uri->segment(2) - 1) * $config['per_page'];
+        } else {
+            $offset = 0;
+        }
+
+        $urls = $this->Urls_model->GetAllByPage($this->session->userdata('id'), $config['per_page'], $offset);
+
+        $data['urls']       = $urls;
+        $data['error']      = null;
+        $data['short_url']  = false;
+        $data['pagination'] = $this->pagination->create_links();
 
         $this->load->view('minhas-urls', $data);
     }

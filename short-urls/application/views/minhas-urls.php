@@ -32,6 +32,8 @@
                         <tr><td><?=$url->address?></td><td><a href="<?=base_url($url->code)?>" target="_blank"><?=base_url($url->code)?></a></td></tr>
                     <?php } ?>
                 </table>
+                <div class="clearfix"></div>
+                <?=$pagination?>
             <?php }else{ ?>
                 <p>Nenhuma URL encurtada.</p>
             <?php } ?>
