@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="page-header">
-    <h1>Capítulo 17 - Manipulação de Imagens</h1>
+    <h1>Manipulação de Imagens</h1>
   </div>
   <div class="row">
     <div class="col-md-12">

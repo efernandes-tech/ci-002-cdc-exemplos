@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Capítulo onde são apresentados os métodos nativos do CI para manipulação de imagens.">
-    <meta name="author" content="Jonathan Lamim Antunes">
+    <meta name="description" content="Apresentação dos métodos nativos do CI para manipulação de imagens.">
+    <meta name="author" content="Éderson Fernandes">
 
-    <title>livro CodeIgniter - Manipulação de Imagens</title>
+    <title>CodeIgniter - Manipulação de Imagens</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">

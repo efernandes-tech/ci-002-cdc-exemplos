@@ -2,9 +2,9 @@
 	<div class="container">
 		<div class="col-md-12">
 			<p class="text-muted text-center">
-				<a href="http://www.livrocodeigniter.com.br" title="Livro CodeIgniter">www.livrocodeigniter.com.br</a>
+				<a href="http://www.edersonfernandes.com.br" title="EdersonFernandes">www.edersonfernandes.com.br</a>
 			</p>
-			<p class="text-muted text-center">&copy; Copyright 2016</p>
+			<p class="text-muted text-center">&copy; Copyright 2017</p>
 		</div>
 	</div>
 </footer>
