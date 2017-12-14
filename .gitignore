@@ -17,3 +17,5 @@ application/logs/*
 /vendor/
 
 /site-institucional/captcha/
+
+/manipulando-imagens/uploads/
