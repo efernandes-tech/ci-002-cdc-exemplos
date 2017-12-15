@@ -1,5 +1,21 @@
 Anotações:
 
 - Todas as aplicações deste projeto usam o mesmo "system".
+- Migrando um projeto da versão 2.X para a 3.X: (pg292)
+    1 - Atualize o diretório system.
+    2 - Atualize o nome das classes.
+    3 - Atualize o arquivo config/mimes.php
+    4 - Atualize o arquivo config/autoload.php
+    5 - Mover as alterações da classe log ou extensões.
+    6 - Atualização para as novas features da library session.
+    7 - Atualize o arquivo config/database.php
+    8 - Substitua os templates de erro.php
+    9 - Atualize o arquivo config/routes.php
+    10 - Funções e métodos com mudança do valor retornado.
+    11 - Uso do filtro de XSS.
+    12 - Uso de get_post()
+    13 - Atualização de mensagens do form_validation()
+    14 - Mudanças menores
+    15 - Atenção com as funcionalidades descontinuadas.
 
 PG 276 => Cap. 18

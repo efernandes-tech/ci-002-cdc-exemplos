@@ -21,7 +21,6 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$mail = new PHPMailer;
-
 		$mail->setFrom('from@example.com', 'Mailer');
 		$mail->addAddress('joe@example.net', 'Joe User');
 		$mail->isHTML(true);
