@@ -18,9 +18,9 @@ application/logs/*
 
 /site-institucional/captcha/
 
-//manipulando-imagens/uploads/*
-//manipulando-imagens/uploads/cropped/*
-//manipulando-imagens/uploads/resized/*
-//manipulando-imagens/uploads/rotated/*
-//manipulando-imagens/uploads/thumbs/*
-//manipulando-imagens/uploads/watermark/*
+/manipulando-imagens/uploads/*
+/manipulando-imagens/uploads/cropped/*
+/manipulando-imagens/uploads/resized/*
+/manipulando-imagens/uploads/rotated/*
+/manipulando-imagens/uploads/thumbs/*
+/manipulando-imagens/uploads/watermark/*
