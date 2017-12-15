@@ -61,4 +61,23 @@ class Base extends CI_Controller
         return $data;
     }
 
+    private function ResizeImage($config){
+        $config['image_library'] = 'gd2';
+        $config['create_thumb'] = FALSE;
+        $config['new_image'] = "./uploads/resized/";
+
+        $this->image_lib->initialize($config);
+
+        if (!$this->image_lib->resize()){
+            $data['message'] = $this->image_lib->display_errors();
+            $data['status'] = false;
+        }else{
+            $data['message'] = null;
+            $data['status'] = true;
+        }
+        $this->image_lib->clear();
+
+        return $data;
+    }
+
 }

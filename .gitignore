@@ -18,4 +18,6 @@ application/logs/*
 
 /site-institucional/captcha/
 
-/manipulando-imagens/uploads/
+/manipulando-imagens/uploads/*.*
+/manipulando-imagens/uploads/thumbs/*.*
+/manipulando-imagens/uploads/resized/*.*
