@@ -17,5 +17,3 @@ Anotações:
     13 - Atualização de mensagens do form_validation()
     14 - Mudanças menores
     15 - Atenção com as funcionalidades descontinuadas.
-
-PG 276 => Cap. 18
