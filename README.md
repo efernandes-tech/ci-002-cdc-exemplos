@@ -1,2 +1,4 @@
 # ci-002-cdc-exemplos
-Exemplos e testes do CodeIgniter 3.
+
+- Exemplos e Testes;
+- CodeIgniter 3;
