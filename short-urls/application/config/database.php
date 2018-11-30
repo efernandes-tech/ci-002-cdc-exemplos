@@ -97,10 +97,10 @@ $db['default'] = array(
 
 $db['production'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => 'etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	',
+	'username' => 'g65qam8ymwzgfh01',
+	'password' => 'ywnbc4eh7fini3an',
+	'database' => 'pbngvulc4wl4cwmy',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
