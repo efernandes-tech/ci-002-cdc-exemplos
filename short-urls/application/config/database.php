@@ -97,7 +97,7 @@ $db['default'] = array(
 
 $db['production'] = array(
 	'dsn'	=> '',
-	'hostname' => 'etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	',
+	'hostname' => 'etdq12exrvdjisg6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 	'username' => 'g65qam8ymwzgfh01',
 	'password' => 'ywnbc4eh7fini3an',
 	'database' => 'pbngvulc4wl4cwmy',
